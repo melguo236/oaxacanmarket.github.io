@@ -3,13 +3,69 @@
   <head>
     <meta charset="UTF-8">
     <title>My GitHub Pages Site</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+        background-color: #f9f9f9;
+      }
+
+      .chart-container {
+        max-width: 800px;
+        margin: 0 auto 60px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      }
+
+      iframe {
+        width: 100% !important;
+        border: none;
+      }
+    </style>
   </head>
   <body>
     <h1>Here is my Datawrapper Map</h1>
-    <iframe title="Inside Oaxaca's Central Market: Origins of its Domestic Produce" aria-label="Map" id="datawrapper-chart-PmVZM" src="https://datawrapper.dwcdn.net/PmVZM/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="263" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
-</script>
 
-    <iframe title="Which varieties of chile pepper are sold at Oaxaca's central market?" aria-label="Table" id="datawrapper-chart-pfhJP" src="https://datawrapper.dwcdn.net/pfhJP/2/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="895" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r,i=0;r=e[i];i++)if(r.contentWindow===a.source){var d=a.data["datawrapper-height"][t]+"px";r.style.height=d}}}))}();
-</script>
+    <div class="chart-container">
+      <iframe title="Inside Oaxaca's Central Market: Origins of its Domestic Produce"
+              aria-label="Map"
+              id="datawrapper-chart-PmVZM"
+              src="https://datawrapper.dwcdn.net/PmVZM/3/"
+              scrolling="no"
+              frameborder="0"
+              height="263"
+              data-external="1"></iframe>
+    </div>
+
+    <div class="chart-container">
+      <iframe title="Which varieties of chile pepper are sold at Oaxaca's central market?"
+              aria-label="Table"
+              id="datawrapper-chart-pfhJP"
+              src="https://datawrapper.dwcdn.net/pfhJP/2/"
+              scrolling="no"
+              frameborder="0"
+              height="895"
+              data-external="1"></iframe>
+    </div>
+
+    <script type="text/javascript">
+      (function() {
+        "use strict";
+        window.addEventListener("message", function(a) {
+          if (void 0 !== a.data["datawrapper-height"]) {
+            var iframes = document.querySelectorAll("iframe");
+            for (var chartId in a.data["datawrapper-height"]) {
+              for (var i = 0, el; el = iframes[i]; i++) {
+                if (el.contentWindow === a.source) {
+                  el.style.height = a.data["datawrapper-height"][chartId] + "px";
+                }
+              }
+            }
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
