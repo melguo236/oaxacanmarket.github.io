@@ -1,71 +1,241 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>My GitHub Pages Site</title>
-    <style>
-      body {
-        font-family: sans-serif;
-        margin: 40px;
-        background-color: #f9f9f9;
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Oaxacan Market Data Visualizations</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      .chart-container {
-        max-width: 650px;
-        margin: 0 auto 60px auto;
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      }
+    html, body {
+      margin: 0;
+      padding-left: 70px;
+      padding-bottom: 60px;
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      height: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
 
-      iframe {
-        width: 100% !important;
-        border: none;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Here is my Datawrapper Map</h1>
+    .layout {
+      display: flex;
+      height: auto;
+    }
 
-    <div class="chart-container">
-      <iframe title="Inside Oaxaca's Central Market: Origins of its Domestic Produce"
-              aria-label="Map"
-              id="datawrapper-chart-PmVZM"
-              src="https://datawrapper.dwcdn.net/PmVZM/3/"
-              scrolling="no"
-              frameborder="0"
-              height="263"
-              data-external="1"></iframe>
+    .right-pane {
+      width: 90%;
+      padding: 40px 10px;
+    }
+
+    /* Shared layout for intro and graphs */
+    .intro-section,
+    .graph-section {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    /* Intro styling */
+    .intro-image img {
+      width: 400px;
+      height: auto;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .image-credit {
+      font-size: 0.8em;
+      color: #777;
+      margin-top: 8px;
+      text-align: left;
+    }
+
+    .intro-text {
+      font-size: 1em;
+      line-height: 1.4;
+      color: #333;
+    }
+
+    .intro-text h1 {
+      font-size: 1.7em;
+      margin-bottom: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1em;
+      line-height: 1.4;
+    }
+
+    /* Graph layout and text */
+    .graph-text p { 
+      font-size: 1em;
+      line-height: 1.5 !important;
+      color: #333;
+    }
+
+    .graph-container {
+      width: 100%;
+      max-width: 100%;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow:hidden;
+    }
+
+    .graph-container iframe {
+      width: 100% !important;
+      height: auto;
+      border: none;
+      display: block;
+    }
+
+    .graph-container,
+    .intro-image {
+        flex-shrink: 0;
+    }
+    .graph-text,
+    .intro-text {
+        flex: 1;
+        font-size: 1em;
+        line-height: 1.4;
+        color: #333;
+    }
+
+
+    /* Specific chart widths */
+    
+    .table1 { width: 475px; }
+    .pie    { width: 675px; }
+    .map    { width: 675px; }
+    .table2 { width: 675px; }
+
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <div class="right-pane">
+
+      <div class="intro-section">
+        <div class="intro-image">
+          <br><img src="https://cdn.sanity.io/images/cxgd3urn/production/db2a04f7a4bc0f6101673a4c9a052c634f0a4437-1600x1267.jpg" alt="Painting of fruit vendor">
+          <p class="image-credit">Olga Costa, <i>La vendedora de frutas (The fruit vendor)</i>, 1951</p>
+        </div>
+        <div class="intro-text">
+          <h1>Agrobiodiversity in a Oaxacan Market: <i>A Window into Bio-Cultural Diversity</i></h1>
+          <p>
+            In the summer of 2023, I participated in an overseas Stanford program in Oaxaca, Mexico focused on bio-cultural diversity and community-based conservation.
+            Led by Dr. Rodolfo Dirzo, this program explored how Indigenous communities and local ecosystems in Oaxaca shape one another, as well as the deep connections 
+            between their cultural traditions and environmental stewardship.
+            <br><br>
+            We conducted a study on agricultural biodiversity, or <i>agrobiodiversity</i>, at Oaxaca's Central de Abastos, the large central market of Oaxaca City. This
+            central market is a vibrant hub of culture and commerce—alive with the calls of hawkers, colorful sights of fresh flowers and produce, and smells of wood smoke 
+            and grilled meats. Our study revealed the incredible variety of crops and wild foods sold there, as well as their sources and native ranges.
+          </p>
+        </div>
+      </div>
+
+      <div class="graph-section">
+        <div class="graph-container table1">
+          <iframe title="Behind the Stalls: A Breakdown of Agrobiodiversity at Oaxaca’s Central de Abastos"
+                  aria-label="Table"
+                  id="datawrapper-chart-ZJJm2"
+                  src="https://datawrapper.dwcdn.net/ZJJm2/2/"
+                  scrolling="no"
+                  frameborder="0"
+                  height="405"
+                  data-external="1"></iframe>
+        </div>
+        <div class="graph-text">
+          <p>Our research team split into groups and traversed the market aisles, visiting stalls and speaking with vendors using random sampling. Through 
+            these conversations, we gathered data and stories on the wide array of foods being sold, from the fruits of prickly pear cactus to roasted insects 
+            by the scoop. The market stalls were abundant with colorful displays of chile peppers, mangos, and corn, offered in dozens of distinct varieties. 
+            Of the 177 species we documented, 78 of them had multiple (genetic) varieties — a striking proportion compared to what you'd find in a typical grocery store. 
+          </p>
+        </div>
     </div>
 
-    <div class="chart-container">
-      <iframe title="Which varieties of chile pepper are sold at Oaxaca's central market?"
-              aria-label="Table"
-              id="datawrapper-chart-pfhJP"
-              src="https://datawrapper.dwcdn.net/pfhJP/3/"
-              scrolling="no"
-              frameborder="0"
-              height="895"
-              data-external="1"></iframe>
-    </div>
+      <div class="graph-section">
+        <div class="graph-container pie">
+          <iframe title="Where does the market produce come from?"
+                  aria-label="Multiple Pies"
+                  id="datawrapper-chart-ZAJDe"
+                  src="https://datawrapper.dwcdn.net/ZAJDe/9/"
+                  scrolling="no"
+                  frameborder="0"
+                  height="418"
+                  data-external="1"></iframe>
+        </div>
+        <div class="graph-text">
+          <p>Of the sampled market goods, most were sourced within Mexico, with only a small fraction imported. 
+            Although just 35% of the market items came from Oaxaca, these items alone accounted for 65% of the species diversity. 
+            Oaxaca's outsized contribution to produce diversity is a testament to its strong local food systems, which are largely 
+            supported by small and family-owned farms that operate independently or through cooperatives.
+           </p>
+        </div>
+      </div>
 
-    <script type="text/javascript">
-      (function() {
-        "use strict";
-        window.addEventListener("message", function(a) {
-          if (void 0 !== a.data["datawrapper-height"]) {
-            var iframes = document.querySelectorAll("iframe");
-            for (var chartId in a.data["datawrapper-height"]) {
-              for (var i = 0, el; el = iframes[i]; i++) {
-                if (el.contentWindow === a.source) {
-                  el.style.height = a.data["datawrapper-height"][chartId] + "px";
-                }
+      <div class="graph-section">
+        <div class="graph-container map">
+          <iframe title="Inside Oaxaca's Central Market: Origins of its Domestic Produce"
+                  aria-label="Map"
+                  id="datawrapper-chart-PmVZM"
+                  src="https://datawrapper.dwcdn.net/PmVZM/11/"
+                  scrolling="no"
+                  frameborder="0"
+                  height="512"
+                  data-external="1"></iframe>
+        </div>
+        <div class="graph-text">
+          <p>In Mexico, Oaxaca is the leading contributor of agrobiodiversity to the market, bringing 155 distinct produce varieties. The state's
+            agriculture diversity stems from its complex geography of mountain ranges, valleys, and varied microclimates that support a wide array of ecosystems. 
+            For thousands of years, Indigenous communities have cultivated these lands, domesticating wild plants and passing down sustainable farming practices still 
+            used today.
+            </p>
+        </div>
+      </div>
+
+      <div class="graph-section">
+        <div class="graph-container table2">
+          <iframe title="Which varieties of chile pepper are sold at Oaxaca's central market?"
+                  aria-label="Table"
+                  id="datawrapper-chart-pfhJP"
+                  src="https://datawrapper.dwcdn.net/pfhJP/9/"
+                  scrolling="no"
+                  frameborder="0"
+                  height="895"
+                  data-external="1"></iframe>
+        </div>
+        <div class="graph-text">
+          <p>Of all the market items, chile peppers stood out as the most biodiverse produce with over 60 varieties. Long before it spread to cuisines worldwide, the chile pepper was first domesticated 
+            by Indigenous farmers in what is now central-east Mexico—a region stretching from southern Puebla and northern Oaxaca to southern Veracruz. This ancient fruit was held sacred for thousands of years
+            by the Inca, Aztec, and Maya civilizations, who used them in rituals, divination, and medicinal practices. Today, the chile pepper remains a cornerstone of Mexican cuisine, 
+            with dozens of varieties endemic to Oaxaca, including chilhuacle, chile de agua, chile tabiche, and more.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    (function() {
+      "use strict";
+      window.addEventListener("message", function(a) {
+        if (a.data["datawrapper-height"]) {
+          var iframes = document.querySelectorAll("iframe");
+          for (var chartId in a.data["datawrapper-height"]) {
+            for (var i = 0, el; el = iframes[i]; i++) {
+              if (el.contentWindow === a.source) {
+                el.style.height = a.data["datawrapper-height"][chartId] + "px";
               }
             }
           }
-        });
-      })();
-    </script>
-  </body>
+        }
+      });
+    })();
+  </script>
+</body>
 </html>
